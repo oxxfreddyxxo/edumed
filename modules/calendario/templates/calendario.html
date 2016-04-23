@@ -1,0 +1,23 @@
+<div class="container-fluid">
+	<div class="container logged-container">
+		<div class="row">
+		  	<div class="col-md-6">		  	
+				<calendar selected="day"></calendar>
+				<span>Selected date: <b>{{day.format('dddd, MMMM Do YYYY')}}</b></span>
+		  </div>
+		  <div class="col-md-6">
+		  	<h3 class="title-back">Recordatorios</h3>
+			<div class="card card-moment animated fadeInUp" ng-repeat="control in controles | orderBy: 'created_at':true">
+				<div class="item item-text-wrap item-icon-left">
+					<i ng-if="control.tipo == 'cita'" class="icon icon-plus"></i>
+					<i ng-if="control.tipo == 'estudio'" class="icon icon-ficha-2"></i>
+					<small>Última revisión médica: {{control.fecha | date:"dd/MM/yyyy"}}</small>
+					<hr>
+					<p>Se recomienda una revisión médica en: </p>
+					<h3>{{control.fecha | amDifference : null : 'days' }} <span>Días</span> <span class="fecha">{{control.fecha | date:"dd/MM/yyyy"}}</span></h3>
+				</div>
+			</div>
+		  </div>	
+		</div>
+	</div>
+</div>

@@ -1,0 +1,24 @@
+<h3 class="title-year">{{month.format("YYYY")}}</h3> 
+<div class="header">
+    <a href="javascript:;" ng-click="previous()" class="btn-calendar btn-back"><i class="icono icon-back"></i> Anterior</a>
+    
+    <div class="header-title">
+        <h3>{{month.format("MMMM")}}</h3> 
+    </div>
+    
+    <a href="javascript:;" ng-click="next()" class="btn-calendar btn-next">Siguiente <i class="icono icon-next"></i></a>
+</div>
+<div class="week names">
+    <span class="day">Dom   </span>
+    <span class="day">Lun</span>
+    <span class="day">Mar</span>
+    <span class="day">Mier</span>
+    <span class="day">Jue</span>
+    <span class="day">Vie</span>
+    <span class="day">Sab</span>
+</div>
+<div class="week week-body" ng-repeat="week in weeks">
+    <span class="day" ng-class="{ today: day.isToday, 'different-month': !day.isCurrentMonth, selected: day.date.isSame(selected) }" ng-click="select(day)" ng-repeat="day in week.days">
+        <span class="day-number">{{day.number}}</span>
+        <a href="javascript:;" class="edit-day"  ng-click="addMoment(day)"><i class="icon-edit"></i></a></span>{{day}}
+</div>

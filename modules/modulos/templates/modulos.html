@@ -1,0 +1,133 @@
+<div class="container-fluid">
+	<div class="container logged-container">
+		<div class="row">
+		  <div class="col-md-12">
+		  	<ul class="module-steps">
+		  		<li class="module-step step-ok"><span>Modulo uno</span></li>
+		  		<li class="module-step active"><span>Modulo dos</span></li>
+		  		<li class="module-step"><span>Modulo tres</span></li>
+		  		<li class="module-step"><span>Modulo cuatro</span></li>
+		  		<li class="module-step"><span>Modulo cinco</span></li>
+		  	</ul>
+		  </div>
+		</div>
+		<div class="row">
+            <div class="col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
+            	<h2 class="title-view">Artritis Psoriásica</h2>
+                <videogular vg-player-ready="onPlayerReady($API)"  ng-show="!testRun" vg-theme="config.theme.url" vg-complete="onCompleteVideo()">
+                    <vg-media vg-src="config.sources" vg-native-controls="false">
+                    </vg-media>
+                    <vg-overlay-play></vg-overlay-play>
+                    <vg-poster vg-url='config.plugins.poster'></vg-poster>
+                    
+                    <vg-controls>
+                        <vg-play-pause-button></vg-play-pause-button>
+                        <vg-time-display>{{ currentTime | date:'mm:ss':'+0000' }}</vg-time-display>
+                        <vg-scrub-bar>
+                        <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+                        </vg-scrub-bar>
+                        <vg-time-display>{{ timeLeft | date:'mm:ss':'+0000' }}</vg-time-display>
+                        <vg-time-display>{{ totalTime | date:'mm:ss':'+0000' }}</vg-time-display>
+                        <vg-volume>
+                        <vg-mute-button></vg-mute-button>
+                        <vg-volume-bar></vg-volume-bar>
+                        </vg-volume>
+                        <vg-fullscreen-button></vg-fullscreen-button>
+                    </vg-controls>
+
+                    <vg-buffering></vg-buffering>
+                </videogular>        
+            </div>
+        </div>
+        <div class="row">
+            <div ng-show="!testRun" class="col-xs-12">
+                <div class="tcenter">
+                    <button type="buttom" ng-click="starTest()" class="btn btn-lg btn-primary">Comenzar Test</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div ng-show="testRun" class="col-sm-10 col-sm-offset-1 col-md-10 col-md-offset-1">
+                <div class="cuestionario">
+                    <form action="">
+                        <h3>Lorem ipsum dolor sit amet?</h3>
+                        <div class="question">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit deleniti.
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit deleniti.
+                                </label>
+                            </div>
+                            <div class="radio disabled">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit deleniti.
+                                </label>
+                            </div>
+                        </div>
+                        <h3>Lorem ipsum dolor sit amet?</h3>
+                        <div class="question">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit deleniti.
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit deleniti.
+                                </label>
+                            </div>
+                            <div class="radio disabled">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit deleniti.
+                                </label>
+                            </div>
+                        </div>
+                        <h3>Lorem ipsum dolor sit amet?</h3>
+                        <div class="question">
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit deleniti.
+                                </label>
+                            </div>
+                            <div class="radio">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit deleniti.
+                                </label>
+                            </div>
+                            <div class="radio disabled">
+                                <label>
+                                    <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit deleniti.
+                                </label>
+                            </div>
+                        </div>
+
+
+                    </form>
+                    <div class="tcenter">
+                    <button type="buttom" ng-click="okTest()" class="btn btn-lg btn-primary">Finalizar Test</button>
+                </div>
+                </div>
+            </div>
+		</div>
+        <div class="row">
+            <div ng-show="testRun" class="col-xs-12">
+                
+            </div>
+        </div>
+	</div>
+</div>
+
+

@@ -1,0 +1,27 @@
+<div class="container-fluid">
+	<div class="container logged-container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2 class="title-view">Pacientes</h2>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Nombre</th>
+							<th>Fecha</th>
+							<th>Rut</th>
+							<th>Codigo</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="paciente in pacientes">
+							<td>{{paciente.nombre}}</td>
+							<td>{{paciente.fecha | date:"dd/MM/yyyy"}}</td>
+							<td>{{paciente.rut}}</td>
+							<td>{{paciente.codigo}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>	        
+		</div>
+	</div>
+</div>

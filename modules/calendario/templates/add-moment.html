@@ -1,0 +1,31 @@
+<div>
+    <div class="tcenter">
+        <h2 class="title-view">{{fecha.format('dddd, D') + ' de '+ fecha.format('MMMM')}}</h2>
+        <h2 class="title-tratamientos">
+            <i class="icono icon-estudios"></i>
+            Estudios<br>Médicos
+        </h2>
+    </div>
+    <form>
+        <div class="form-group">
+            <label class="control-label">Especialidad:</label>
+            <input type="text" class="form-control" placeholder="Medicina General">
+        </div>
+        <div class="form-group">
+            <label class="control-label">Doctor:</label>
+            <input type="text" class="form-control" placeholder="Dr. Francisco Ahumada">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Hora:</label>
+            <input type="time" name="time" />
+        </div>
+        <div class="form-group">
+            <label class="control-label">Lugar:</label>
+            <input type="text" class="form-control" placeholder="Clínica Indisa">
+        </div>
+        <div class="padding tcenter">
+            <button type="submit" ng-click="clickToClose()" class="btn btn-primary">Guardar</button>
+        </div>
+        
+    </form>
+</div>

@@ -1,0 +1,65 @@
+<div class="container-fluid">
+	<div class="container logged-container">
+		<div class="row">
+			<div class="col-md-6 border-right">
+				<div class="padding tcenter">
+					<h2 class="title-tratamientos">
+						<i class="icono icon-medicina"></i>
+						Medicinas<br>recetadas
+					</h2>
+					<div class="padding tcenter">
+						<button type="buttom" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Agregar nuevo</button>
+					</div>
+				</div>
+					
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Nombre</th>
+							<th>Fecha de Inicio</th>
+							<th>Duración</th>
+							<th>Dósis</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="item in tratamientos">
+							<td>{{item.nombre}}</td>
+							<td>{{item.fecha | date:"dd/MM/yyyy"}}</td>
+							<td>{{item.duracion }}</td>
+							<td>{{item.dosis}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="col-md-6">
+				<div class="padding tcenter">
+					<h2 class="title-tratamientos">
+						<i class="icono icon-estudios"></i>
+						Estudios<br>Médicos
+					</h2>
+					<div class="padding tcenter">
+						<button type="buttom" class="btn btn-primary"><i class="glyphicon glyphicon-plus"></i> Agregar nuevo</button>
+					</div>
+				</div>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Tipo</th>
+							<th>Fecha</th>
+							<th>Frecuencía</th>
+							<th>Resultados</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="item in estudios">
+							<td>{{item.nombre}}</td>
+							<td>{{item.fecha | date:"dd/MM/yyyy"}}</td>
+							<td>{{item.frecuencia }}</td>
+							<td>Ver</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

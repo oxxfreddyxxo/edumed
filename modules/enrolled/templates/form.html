@@ -1,0 +1,29 @@
+<div class="container-fluid">
+	<div class="container logged-container">
+		<div class="row">
+			<div class="col-md-6">		  	
+				
+			</div>
+			<div class="col-md-6">
+				<div class="card head-avatar">
+					<div class="img-avatar">
+						<img src="img/user.jpg" alt="">
+					</div>
+					<h3>Bienvenido Andrés</h3>
+				</div>
+				<div class="card card-moment card-moment-enrolled" ng-repeat="control in controles | orderBy: 'created_at':true">
+					<div class="item item-text-wrap item-icon-left">
+						<i ng-if="control.tipo == 'cita'" class="icon icon-plus"></i>
+						<i ng-if="control.tipo == 'estudio'" class="icon icon-ficha-2"></i>
+						<small>Última revisión médica: {{control.fecha | date:"dd/MM/yyyy"}}</small>
+						<hr>
+						<p>Se recomienda una revisión médica en: </p>
+						<h3>{{control.fecha | amDifference : null : 'days' }} <span>Días</span> <span class="fecha">{{control.fecha | date:"dd/MM/yyyy"}}</span></h3>
+
+						<a href="javascript:;" class="btn-actualizar">Actualizar</a>
+					</div>
+				</div>
+			</div>	
+		</div>
+	</div>
+</div>

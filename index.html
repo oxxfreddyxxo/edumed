@@ -1,0 +1,141 @@
+<!-- index.html -->
+	<!DOCTYPE html>
+
+	<!-- define angular app -->
+	<html ng-app="EduMed">
+	<head>
+	  	
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap/dist/css/bootstrap.min.css">
+
+
+	<link rel="stylesheet" type="text/css" href="lib/ionicons-2.0.1/css/ionicons.css">
+	<!--link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'-->
+	<link rel="stylesheet" type="text/css" href="lib/ng-dialog/css/ngDialog.css">
+	<link rel="stylesheet" type="text/css" href="lib/ng-dialog/css/ngDialog-theme-default.css">
+	<link rel="stylesheet" href="css/base.css">
+
+	<!--css CAROUSEL-->
+	<link rel="stylesheet" href="lib/slick-carousel/slick/slick.css">
+	<link rel="stylesheet" href="lib/slick-carousel/slick/slick-theme.css">
+	
+
+
+	<script src="lib/jquery/dist/jquery.js"></script><!--jquey usado en carousel-->
+	<script src="lib/angular/angular.js"></script>
+	<script src="lib/angular-sanitize/angular-sanitize.min.js"></script>
+	<script src="lib/angular-route/angular-route.min.js"></script>
+	<script src="lib/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+	<script src="lib/ng-dialog/js/ngDialog.js"></script>
+	<!--js VIDEOGULAR-->
+	<script src="lib/videogular/videogular.js"></script>
+	<script src="lib/videogular-controls/vg-controls.js"></script>
+	<script src="lib/videogular-overlay-play/vg-overlay-play.js"></script>
+	<script src="lib/videogular-poster/vg-poster.js"></script>
+	<script src="lib/videogular-buffering/vg-buffering.js"></script>
+	<script src="lib/bower-videogular-youtube/youtube.js"></script>
+	<!--js CAROUSEL-->
+	<script src="lib/slick-carousel/slick/slick.js"></script>
+    <script src="lib/angular-slick-carousel/dist/angular-slick.min.js"></script>
+
+
+
+	<script src="js/app.js"></script>
+	
+	<script src="lib/moment/moment.js"></script>
+	<script src="lib/angular-moment/angular-moment.min.js"></script>
+	<script src="lib/moment/locale/es.js"></script>
+
+
+		  
+	  
+	<script src="js/mainController.js"></script>
+
+	<script src="modules/app-utils/directive/directive.js"></script>
+	<script src="modules/app-utils/factory/pacientes.js"></script>
+
+	<script src="modules/home/controllers/controller.js"></script>
+	<script src="modules/home/directive/directive.js"></script>
+	
+	<script src="modules/planes/controllers/controller.js"></script>
+
+	<script src="modules/pacientes/controllers/controller.js"></script>
+
+	<script src="modules/enrolled/controllers/controller.js"></script>
+	  
+	<script src="modules/calendario/controllers/controller.js"></script>
+	<script src="modules/calendario/directive/directive.js"></script>
+
+	<script src="modules/modulos/controllers/controller.js"></script>
+
+	<script src="modules/tratamientos/controllers/controller.js"></script>
+
+	</head>
+
+	<!-- define angular controller -->
+	<!-- background-change -->
+	<body ng-controller="mainController" ng-class='bodyClass'>
+
+	  	<nav class="navbar navbar-default navbar-static-top ">
+	  		<div class="container">
+			
+				<a class="logo-content" href="./">
+					<h1 class="logo-app">EduMed</h1>
+				</a>
+				
+				<div class="navbar-header">
+					<ul class="nav navbar-nav">
+						<li class="">
+							<a href="javascript:;" class="btn-inicio">Inicio</a>
+						</li>
+						<li>
+							<a href="javascript:;" class="btn-login"  ng-click="clickToOpen()">Login</a>
+						</li>
+					</ul>
+				</div>
+			  <div class="search-bar">
+					<input type="text" placeholder="Explora una enfermedad..."> <a href="javascript:;"><i class="icon-search"></i></a>
+				</div>
+			</div>
+
+
+	  </nav>
+	  <!-- MAIN CONTENT AND INJECTED VIEWS -->
+		<div ng-view>
+
+
+		</div>
+		
+		<nav class="nav-footer">
+			<div class="container">
+				<div class="btns-footer">
+					<a href="javascript:;" go-click="/modulos" class="btn-foot btn-aprender">Aprender <i class="icon-ampolleta-2"></i></a>
+					<a href="javascript:;" go-click="/calendario" class="btn-foot btn-calendario">Mi Calendario <i class="icon-calendario"></i></a>
+					<!--a href="#" class="btn-foot btn-comunidad">Comunidad <i class="icon-chat"></i></a-->
+					<a href="javascript:;" go-click="/tratamientos" class="btn-foot btn-tratamiento">Mi tratmiento <i class="icon-ficha"></i></a>
+				</div>
+			</div>
+		</nav>
+		
+		<script type="text/ng-template" id="popupTmpl.html">
+			<div class="login">
+				<form>
+					<div class="form-group">
+						<label for="exampleInputEmail1">E-mail:</label>
+						<input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+					</div>
+					<div class="form-group">
+						<label for="exampleInputPassword1">Contraseña:</label>
+						<input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+					</div>
+					
+					<button type="submit" ng-click="clickToClose()" class="btn btn-blue btn-block">Log in</button>
+					<hr>
+					<button type="submit" ng-click="globalFoo()" class="btn btn-orange btn-block">Suscripción individual</button>
+					<button type="submit" class="btn btn-light-blue btn-block">Suscripción mediante código</button>
+					<button type="submit" class="btn btn-yellow btn-block">Suscripción institucional o para médicos</button>
+				</form>
+			</div>
+		</script>
+	</body>
+
+   </html> 
